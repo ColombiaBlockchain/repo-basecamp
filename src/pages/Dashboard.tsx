@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
-import { Navigate } from 'react-router-dom';
+import { Navigate, Routes, Route, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import DashboardSidebar from '@/components/Dashboard/DashboardSidebar';
-import DashboardKPIs from '@/components/Dashboard/DashboardKPIs';
 import { EventModal } from '@/components/EventModal';
 import LanguageSwitch from '@/components/LanguageSwitch';
 import { useAuth } from '@/hooks/useAuth';
@@ -10,10 +9,30 @@ import { useLanguage } from '@/hooks/useLanguage';
 import { Plus, LogOut, User } from 'lucide-react';
 import { motion } from 'framer-motion';
 
+// Dashboard Pages
+import DashboardOverview from './Dashboard/DashboardOverview';
+import MyEvents from './Dashboard/MyEvents';
+import Analytics from './Dashboard/Analytics';
+import Profile from './Dashboard/Profile';
+import Settings from './Dashboard/Settings';
+
 const Dashboard = () => {
   const { user, logout, loading } = useAuth();
   const { t } = useLanguage();
+  const location = useLocation();
   const [isEventModalOpen, setIsEventModalOpen] = useState(false);
+
+  // Get page title based on current route
+  const getPageTitle = () => {
+    const path = location.pathname;
+    if (path === '/dashboard') return t('dashboard.overview');
+    if (path.includes('/events')) return t('dashboard.myEvents');
+    if (path.includes('/analytics')) return t('dashboard.analytics');
+    if (path.includes('/profile')) return t('dashboard.profile');
+    if (path.includes('/settings')) return t('dashboard.settings');
+    if (path.includes('/create-event')) return t('dashboard.createEvent');
+    return t('dashboard.overview');
+  };
 
   useEffect(() => {
     // Listen for language changes
@@ -53,10 +72,10 @@ const Dashboard = () => {
             <div className="flex items-center gap-4">
               <div>
                 <h1 className="text-2xl font-bold hero-title">
-                  {t('dashboard.welcome')}, {user.displayName}!
+                  {getPageTitle()}
                 </h1>
                 <p className="text-sm text-muted-foreground">
-                  {new Date().toLocaleDateString()} • {t('dashboard.overview')}
+                  {new Date().toLocaleDateString()} • Welcome, {user.displayName}!
                 </p>
               </div>
             </div>
@@ -92,89 +111,14 @@ const Dashboard = () => {
         </header>
 
         {/* Dashboard Content */}
-        <div className="p-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            {/* KPI Cards */}
-            <DashboardKPIs />
-
-            {/* Quick Actions */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="cyber-panel rounded-lg p-6 border border-border"
-              >
-                <h3 className="text-lg font-semibold mb-4 text-foreground">Quick Actions</h3>
-                <div className="space-y-3">
-                  <Button
-                    variant="dashboard"
-                    className="w-full justify-start gap-3"
-                    onClick={() => setIsEventModalOpen(true)}
-                  >
-                    <Plus className="w-4 h-4" />
-                    {t('dashboard.createEvent')}
-                  </Button>
-                  <Button
-                    variant="dashboard"
-                    className="w-full justify-start gap-3"
-                  >
-                    <User className="w-4 h-4" />
-                    {t('dashboard.profile')}
-                  </Button>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="cyber-panel rounded-lg p-6 border border-border"
-              >
-                <h3 className="text-lg font-semibold mb-4 text-foreground">Recent Activity</h3>
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-muted-foreground">Account created</span>
-                    <span className="text-primary">Today</span>
-                  </div>
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-muted-foreground">Dashboard accessed</span>
-                    <span className="text-primary">Now</span>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-
-            {/* Welcome Message */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="cyber-panel rounded-lg p-6 border border-border text-center"
-            >
-              <h2 className="text-2xl font-bold mb-4 hero-title">
-                Welcome to EventMetrix
-              </h2>
-              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                Start by creating your first event to track analytics, manage attendees, 
-                and optimize your event ROI with our advanced metrics platform.
-              </p>
-              <Button
-                variant="hero"
-                size="lg"
-                onClick={() => setIsEventModalOpen(true)}
-                className="gap-2"
-              >
-                <Plus className="w-5 h-5" />
-                Create Your First Event
-              </Button>
-            </motion.div>
-          </motion.div>
-        </div>
+        <Routes>
+          <Route index element={<DashboardOverview />} />
+          <Route path="events" element={<MyEvents />} />
+          <Route path="analytics" element={<Analytics />} />
+          <Route path="profile" element={<Profile />} />
+          <Route path="settings" element={<Settings />} />
+          <Route path="create-event" element={<DashboardOverview />} />
+        </Routes>
       </main>
 
       {/* Event Creation Modal */}
