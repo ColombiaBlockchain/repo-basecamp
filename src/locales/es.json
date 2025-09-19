@@ -1,0 +1,103 @@
+{
+  "hero": {
+    "title": "Revolución en Métricas de Eventos",
+    "tagline": "Analítica Avanzada para Eventos Blockchain",
+    "subtitle": "Transforma tus eventos en experiencias basadas en datos con métricas en tiempo real e insights inteligentes",
+    "description": "Aprovecha el poder de la analítica avanzada de eventos para optimizar el engagement, maximizar el ROI y ofrecer experiencias inolvidables."
+  },
+  "cta": {
+    "signup": "Registrarse",
+    "login": "Iniciar Sesión",
+    "getStarted": "Empezar",
+    "learnMore": "Saber Más"
+  },
+  "register": {
+    "title": "Crear Cuenta",
+    "email": "Correo Electrónico",
+    "password": "Contraseña",
+    "displayName": "Nombre de Usuario",
+    "country": "País",
+    "team": "Equipo",
+    "role": "Rol",
+    "submit": "Crear Cuenta",
+    "hasAccount": "¿Ya tienes una cuenta?",
+    "loginLink": "Inicia sesión aquí"
+  },
+  "login": {
+    "title": "Bienvenido de Nuevo",
+    "identifier": "Email o Usuario",
+    "password": "Contraseña",
+    "submit": "Iniciar Sesión",
+    "prototypeMode": "Modo Prototipo - Se acepta cualquier credencial",
+    "noAccount": "¿No tienes una cuenta?",
+    "registerLink": "Regístrate aquí"
+  },
+  "dashboard": {
+    "title": "Panel de Control",
+    "welcome": "Bienvenido de nuevo",
+    "createEvent": "Crear Evento",
+    "myEvents": "Mis Eventos",
+    "settings": "Configuración",
+    "overview": "Resumen",
+    "analytics": "Analíticas",
+    "profile": "Perfil"
+  },
+  "event": {
+    "create": {
+      "title": "Crear Nuevo Evento",
+      "name": "Nombre del Evento",
+      "objectives": "Objetivos",
+      "city": "Ciudad",
+      "locationUrl": "URL de Ubicación",
+      "expectedAttendees": "Asistentes Esperados",
+      "eventType": "Tipo de Evento",
+      "startDate": "Fecha de Inicio",
+      "endDate": "Fecha de Finalización",
+      "submit": "Crear Evento"
+    },
+    "types": {
+      "workshop": "Taller",
+      "bootcamp": "Bootcamp",
+      "networking": "Networking",
+      "hackathon": "Hackathon",
+      "expo": "Expo/Feria",
+      "educational": "Taller Educativo",
+      "demo": "Demo Day",
+      "ama": "AMA/Meetup",
+      "panel": "Panel"
+    },
+    "name": "Nombre del Evento",
+    "type": "Tipo de Evento",
+    "attendees": "Asistentes",
+    "roi": "ROI",
+    "revenue": "Ingresos"
+  },
+  "roles": {
+    "ambassador": "Embajador",
+    "organizer": "Organizador",
+    "sponsor": "Patrocinador",
+    "attendee": "Asistente"
+  },
+  "navigation": {
+    "home": "Inicio",
+    "dashboard": "Panel",
+    "events": "Eventos",
+    "analytics": "Analíticas",
+    "profile": "Perfil"
+  },
+  "metrics": {
+    "totalEvents": "Total de Eventos",
+    "totalAttendees": "Total de Asistentes",
+    "averageRoi": "ROI Promedio",
+    "totalRevenue": "Ingresos Totales"
+  },
+  "common": {
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito"
+  }
+}

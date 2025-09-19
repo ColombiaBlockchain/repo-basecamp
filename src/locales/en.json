@@ -1,0 +1,103 @@
+{
+  "hero": {
+    "title": "Event Metrics Revolution",
+    "tagline": "Advanced Analytics for Blockchain Events",
+    "subtitle": "Transform your events into data-driven experiences with real-time metrics and intelligent insights",
+    "description": "Harness the power of advanced event analytics to optimize engagement, maximize ROI, and deliver unforgettable experiences."
+  },
+  "cta": {
+    "signup": "Sign Up",
+    "login": "Login",
+    "getStarted": "Get Started",
+    "learnMore": "Learn More"
+  },
+  "register": {
+    "title": "Create Account",
+    "email": "Email Address",
+    "password": "Password",
+    "displayName": "Display Name",
+    "country": "Country",
+    "team": "Team",
+    "role": "Role",
+    "submit": "Create Account",
+    "hasAccount": "Already have an account?",
+    "loginLink": "Sign in here"
+  },
+  "login": {
+    "title": "Welcome Back",
+    "identifier": "Email or Username",
+    "password": "Password",
+    "submit": "Sign In",
+    "prototypeMode": "Prototype Mode - Any credentials accepted",
+    "noAccount": "Don't have an account?",
+    "registerLink": "Sign up here"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome back",
+    "createEvent": "Create Event",
+    "myEvents": "My Events",
+    "settings": "Settings",
+    "overview": "Overview",
+    "analytics": "Analytics",
+    "profile": "Profile"
+  },
+  "event": {
+    "create": {
+      "title": "Create New Event",
+      "name": "Event Name",
+      "objectives": "Objectives",
+      "city": "City",
+      "locationUrl": "Location URL",
+      "expectedAttendees": "Expected Attendees",
+      "eventType": "Event Type",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "submit": "Create Event"
+    },
+    "types": {
+      "workshop": "Workshop",
+      "bootcamp": "Bootcamp",
+      "networking": "Networking",
+      "hackathon": "Hackathon",
+      "expo": "Expo/Fair",
+      "educational": "Educational Workshop",
+      "demo": "Demo Day",
+      "ama": "AMA/Meetup",
+      "panel": "Panel"
+    },
+    "name": "Event Name",
+    "type": "Event Type",
+    "attendees": "Attendees",
+    "roi": "ROI",
+    "revenue": "Revenue"
+  },
+  "roles": {
+    "ambassador": "Ambassador",
+    "organizer": "Organizer",
+    "sponsor": "Sponsor",
+    "attendee": "Attendee"
+  },
+  "navigation": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "events": "Events",
+    "analytics": "Analytics",
+    "profile": "Profile"
+  },
+  "metrics": {
+    "totalEvents": "Total Events",
+    "totalAttendees": "Total Attendees",
+    "averageRoi": "Average ROI",
+    "totalRevenue": "Total Revenue"
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success"
+  }
+}

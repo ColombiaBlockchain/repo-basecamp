@@ -15,11 +15,17 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        // Event Metrics custom variants
+        neon: "bg-gradient-primary text-primary-foreground shadow-neon hover:shadow-glow transition-all duration-300 neon-glow",
+        hero: "bg-gradient-primary text-primary-foreground text-lg font-semibold py-3 px-8 shadow-neon hover:shadow-glow hover:scale-105 transition-all duration-300",
+        cyber: "bg-cyber-panel border border-cyber-gray text-foreground hover:border-neon-red hover:text-neon-red transition-all duration-300",
+        dashboard: "bg-secondary/50 text-secondary-foreground border border-border hover:bg-secondary hover:border-primary/50 transition-all duration-300",
       },
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
+        xl: "h-12 rounded-lg px-10 text-base",
         icon: "h-10 w-10",
       },
     },
